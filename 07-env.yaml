@@ -4,7 +4,7 @@ metadata:
   name: env-demo
 spec:
   containers:
-  - name:
+  - name: nginx
     image: nginx
     env: 
     - name: project
