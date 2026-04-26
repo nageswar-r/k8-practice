@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+  labels:
+    project: roboshop
+    pupose: rs-demo
+    tier: frontend
+    component: frontend
+  annotations:
+    kubernetes.io/change-cause: "moving to 1.29"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      project: roboshop
+      pupose: rs-demo
+      tier: frontend
+      component: frontend
+  template:
+    metadata:
+      labels:
+        project: roboshop
+        pupose: rs-demo
+        tier: frontend
+        component: frontend  
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.29
