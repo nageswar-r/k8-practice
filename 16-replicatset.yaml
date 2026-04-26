@@ -25,4 +25,4 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:stable-apline3.23-per1
+        image: nginx
