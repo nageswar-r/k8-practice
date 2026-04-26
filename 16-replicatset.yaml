@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: ReplicaSet
+metadata:
+  name: nginx
+  labels:
+    project: roboshop
+    pupose: rs-demo
+    tier: frontend
+    component: frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+    project: roboshop
+    pupose: rs-demo
+    tier: frontend
+    component: frontend
+template:
+  metadata:
+    labels:
+      project: roboshop
+      pupose: rs-demo
+      tier: frontend
+      component: frontend  
+  spec:
+    containers:
+    - name: nginx
+      image: nginx:stable-apline3.23-per1
