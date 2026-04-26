@@ -11,10 +11,10 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-    project: roboshop
-    pupose: rs-demo
-    tier: frontend
-    component: frontend
+      project: roboshop
+      pupose: rs-demo
+      tier: frontend
+      component: frontend
 template:
   metadata:
     labels:
